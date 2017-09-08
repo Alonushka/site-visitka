@@ -1,0 +1,25 @@
+body{background-image : url(backphoto.jpg); background-attachment:fixed;} 
+
+h2{font-family:sans-serif;  color:navy; font-size:30px; text-align:center; font-style:norma; font-variant:normal;}
+
+h3{color:red; font-size:25px; font-style:oblique; font-variant:normal; }
+
+h4{color:red ; font-size:30px ;  font-style:italic; font-variant:normal;}
+
+h5{color: black; font-size: 20px; font-style:italic; font-variant:normal; font-weight: bold;  }
+
+.menu li {
+    padding: 0 16px 23px;
+    padding-top: 0px;
+    padding-right: 16px;
+    padding-bottom: 23px;
+    padding-left: 16px;
+    display: inline-block; 
+	font-size: 35px;
+}
+
+
+.menu{text-align:center;}
+
+
+
