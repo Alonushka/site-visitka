@@ -5,10 +5,37 @@
 		
 		<meta charset="UTF-8">
 
-		<title>	♫ Контакты </title>	
+		<title>	 Контакты </title>	
 
 <link rel="stylesheet" type="text/css" href="contacts.css">
 <link rel="stylesheet" type="text/css" href="test.css">
+
+<script type="text/javascript">
+	function validateForm() {
+
+		var div = document.getElementById('validation_errors');
+
+		div.innerHTML = '';
+
+
+		if(document.forms.feedback_form.name.value=="") {
+			div.innerHTML+="Поле Имя не может быть пустым. Заполните поле Имя<br>" ;
+		}
+
+		if(document.forms.feedback_form.message.value=="") {
+			div.innerHTML+="Поле Сообщение не может быть пустым. Заполните поле Сообщение<br>" ;
+		}
+
+		if(document.forms.feedback_form.Email.value=="") {
+			div.innerHTML+="Поле E-mail не может быть пустым. Заполните поле E-mail" ;
+		}
+
+		return div.innerHTML=='';
+
+	}
+
+</script>
+
 
 	</head>	
 
@@ -44,11 +71,29 @@
 		<br>
 
 		<h5> Обратная связь </h5> 
-		<form >
-			<label>Имя</label> <input type="text" name="name"> <br>
-			<label>Сообщение</label><textarea name="text" name="message"> </textarea> <br>
-			<label>E-mail</label><input type="text" name="E-mail"><br>
-			<input type="submit" name="Отправить">
+		<form id="feedback_form">
+			 <table>
+			 	<tr>
+			 		<td>Имя</td> 
+			 		<td><input type="text" name="name"></td>
+			 	</tr>
+				<tr>
+					<td>Сообщение</td>	
+					<td><textarea name="message"></textarea></td>
+				</tr>
+				<tr>
+					<td>E-mail</td>
+					<td><input type="text" name="Email"></td>
+				</tr>
+				<tr>	
+					<td colspan="2"><input type="submit" name="Отправить" onclick="return validateForm();"></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div style="color: red;" id="validation_errors"></div>
+					</td>
+				</tr>
+			</table>
 		</form>
 
 
